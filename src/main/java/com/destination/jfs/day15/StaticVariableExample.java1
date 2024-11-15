@@ -1,0 +1,49 @@
+package com.destination.jfs.day15;
+class Calculator{
+	static int a, b, c;   // static variables
+	int d, e, f;   //non-static variables
+	// static block
+	static {
+		System.out.println("hi");
+		a= 100;
+		b= 200; 
+		c= 300;
+		
+	}
+	// non-static block
+	{
+		d=10;
+		e=20;
+		f=30;
+	}
+	// static method
+	static  void display1() {
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		
+		
+	}
+	// non- static method
+	void display2() {
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+	}
+	
+}
+
+
+public class StaticVariableExample {
+
+	public static void main(String[] args) {
+		System.out.println("main");
+		Calculator.display1();
+		Calculator c = new Calculator();
+		c.display2();
+	
+		// TODO Auto-generated method stub
+
+	}
+
+}
